@@ -6,11 +6,10 @@
   <style>
     body {
       margin: 0;
-      background: #000; /* Black sky */
+      background: #000;
       overflow: hidden;
     }
 
-    /* Realistic moon image */
     .moon {
       position: absolute;
       top: 50px;
@@ -25,7 +24,6 @@
       height: auto;
     }
 
-    /* Twinkling stars */
     .star {
       position: absolute;
       width: 2px;
@@ -40,7 +38,6 @@
       50% { opacity: 1; box-shadow: 0 0 10px #fff; }
     }
 
-    /* Snow effect */
     .snow {
       position: fixed;
       top: 0;
@@ -68,7 +65,6 @@
       }
     }
 
-    /* Dancing couple at bottom */
     .couple {
       position: absolute;
       bottom: 0;
@@ -78,9 +74,9 @@
     }
 
     .couple video {
-  height: 250px;
-  animation: dance 2s infinite alternate;
-}
+      height: 250px;
+      animation: dance 2s infinite alternate;
+    }
 
     @keyframes dance {
       0% { transform: translateX(-10px); }
@@ -90,12 +86,10 @@
 </head>
 <body>
 
-  <!-- Moon image -->
   <div class="moon">
     <img src="Moon-Transparent-PNG.png" alt="Moon" />
   </div>
 
-  <!-- Stars -->
   <script>
     for (let i = 0; i < 100; i++) {
       const star = document.createElement("div");
@@ -107,7 +101,6 @@
     }
   </script>
 
-  <!-- Snow -->
   <div class="snow" id="snowContainer"></div>
   <script>
     const snowContainer = document.getElementById("snowContainer");
@@ -122,18 +115,15 @@
     }
   </script>
 
-  <!-- Couple video -->
-<div class="couple">
-  <video src="couple.mp4" autoplay loop muted playsinline></video>
-</div>
+  <div class="couple">
+    <video src="couple.mp4" autoplay loop muted playsinline></video>
+  </div>
 
-<!-- Music Control -->
-<audio id="bgMusic" controls style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">
-  <source src="Main Agar Kahoon - Om Shanti Om 128 Kbps.mp3" type="audio/mp3">
-  Your browser does not support the audio element.
-</audio>
-
-
+  <!-- ✅ Fixed MP3 filename -->
+  <audio id="bgMusic" controls style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">
+    <source src="main-agar-kahoon.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 
 </body>
 </html>
